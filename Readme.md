@@ -28,7 +28,7 @@ The output is a .flagstat file with 16 lines in the format #PASS + #FAIL:
 
 1. The first row of output gives the total number of reads that are QC pass and fail (according to flag bit 0x200). 
 
-### Additional categories given for reads are:
+#### Additional categories given for reads are:
 
 2. primary neither 0x100 nor 0x800 bit set 
 3. secondary 0x100 bit set 
@@ -43,7 +43,7 @@ The output is a .flagstat file with 16 lines in the format #PASS + #FAIL:
 12. properly paired both 0x1 and 0x2 bits set and 0x4 bit not set 
 13. with itself and mate mapped 0x1 bit set and neither 0x4 nor 0x8 bits set 
 14. singletons both 0x1 and 0x8 bits set and bit 0x4 not set
-### And finally, two rows are given that additionally filter on the reference name (RNAME), mate reference name (MRNM), and mapping quality (MAPQ) fields:  
+#### And finally, two rows are given that additionally filter on the reference name (RNAME), mate reference name (MRNM), and mapping quality (MAPQ) fields:  
 15. with mate mapped to a different chr 0x1 bit set and neither 0x4 nor 0x8 bits set and MRNM not equal to RNAME 
 16. with mate mapped to a different chr (mapQ>=5) 0x1 bit set and neither 0x4 nor 0x8 bits set and MRNM not equal to RNAME and MAPQ >= 5 
 ## How to run this app from the command line?
