@@ -48,4 +48,5 @@ The output is a .flagstat file with 16 lines in the format #PASS + #FAIL:
 16. with mate mapped to a different chr (mapQ>=5) 0x1 bit set and neither 0x4 nor 0x8 bits set and MRNM not equal to RNAME and MAPQ >= 5 
 ## How to run this app from the command line?
 
+
 ### This app was made by EMEE GLH
