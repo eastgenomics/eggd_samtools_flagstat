@@ -47,6 +47,15 @@ The output is a .flagstat file with 16 lines in the format #PASS + #FAIL:
 15. with mate mapped to a different chr 0x1 bit set and neither 0x4 nor 0x8 bits set and MRNM not equal to RNAME 
 16. with mate mapped to a different chr (mapQ>=5) 0x1 bit set and neither 0x4 nor 0x8 bits set and MRNM not equal to RNAME and MAPQ >= 5 
 ## How to run this app from the command line?
+dx run app-eggd_samtools_flagstat
 
+Input: input_bam
+Enter file ID or path:
+
+Input: input_bam_index
+Enter file ID or path:
+
+Confirm running the executable with this input [Y/n]:
+y
 
 ### This app was made by EMEE GLH
