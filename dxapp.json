@@ -3,7 +3,7 @@
     "title": "eggd_samtools_flagstat",
     "summary": "Provides read counts for each of 13 categories based primarily on bit flags in the FLAG field. Each category in the output is broken down into QC pass and QC fail. In the default output format, these are presented as \"#PASS + #FAIL\" followed by a description of the category. See http://www.htslib.org/doc/samtools-flagstat.html for further documentation",
     "version": "1.1.0",
-    "whatsNew": "* v1.1.0 Updated samtools version to 1.16.1, Updated name, instance type and ubuntu release, deleted githubrelease field. ",
+    "whatsNew": "* v1.1.0 Updated samtools version to 1.16.1, Transitioned to a DNANexus app, Updated name, instance type and ubuntu release, deleted githubrelease field. ",
     "dxapi": "1.0.0",
     "inputSpec": [
       {
