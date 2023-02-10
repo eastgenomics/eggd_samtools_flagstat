@@ -1,7 +1,7 @@
 <!-- dx-header -->
 # eggd_samtools_flagstat (DNAnexus Platform App)
 
-eggd_samtools_flagstat is an app used to quantify the number of allignments for each FLAG field in a bam file. It takes in a bam and index file and calculates statistics based on bit flags in the FLAG field, information about the flags can be found in the following document: https://samtools.github.io/hts-specs/SAMv1.pdf
+eggd_samtools_flagstat is an app used to quantify the number of alignments for each FLAG field in a bam file. It takes in a bam and index file and calculates statistics based on bit flags in the FLAG field, information about the flags can be found in the following document: https://samtools.github.io/hts-specs/SAMv1.pdf
 
 <!-- Insert a description of your app here -->
 ## What does this app do?
@@ -18,7 +18,7 @@ https://documentation.dnanexus.com/.
 
 
 ## What are typical use cases for this app?
-This app should be executed to calculate Quality Control statics related to reads in .bam files.
+This app should be executed to calculate Quality Control statistics related to reads in .bam files.
 
 ## What are the inputs?
 The app requires a BAM file (.bam), and a corresponding index file (bam.bai).
