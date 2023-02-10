@@ -1,7 +1,7 @@
 <!-- dx-header -->
 # eggd_samtools_flagstat (DNAnexus Platform App)
 
-eggd_samtools_flagstat is an app used to quantify the number of allignment for each FLAG type. It takes in a bam and index file and calculates statistics based on bit flags in the FLAG field, information about the flags can be found in the following document: https://samtools.github.io/hts-specs/SAMv1.pdf
+eggd_samtools_flagstat is an app used to quantify the number of allignments for each FLAG field in a bam file. It takes in a bam and index file and calculates statistics based on bit flags in the FLAG field, information about the flags can be found in the following document: https://samtools.github.io/hts-specs/SAMv1.pdf
 
 <!-- Insert a description of your app here -->
 ## What does this app do?
@@ -44,8 +44,10 @@ The output is a .flagstat file with 16 lines in the format #PASS + #FAIL:
 13. with itself and mate mapped (0x1 bit set and neither 0x4 nor 0x8 bits set)
 14. singletons (both 0x1 and 0x8 bits set and bit 0x4 not set)
 ### And finally, two rows are given that additionally filter on the reference name (RNAME), mate reference name (MRNM), and mapping quality (MAPQ) fields:  
-15. with mate mapped to a different chr 0x1 bit set and neither 0x4 nor 0x8 bits set and MRNM not equal to RNAME 
-16. with mate mapped to a different chr (mapQ>=5) 0x1 bit set and neither 0x4 nor 0x8 bits set and MRNM not equal to RNAME and MAPQ >= 5 
+15. with mate mapped to a different chr     
+    (0x1 bit set and neither 0x4 nor 0x8 bits set and MRNM not equal to RNAME)
+16. with mate mapped to a different chr 
+    ((mapQ>=5) 0x1 bit set and neither 0x4 nor 0x8 bits set and MRNM not equal to RNAME and MAPQ >= 5)
 
 ## How to run this app from the command line?
 
