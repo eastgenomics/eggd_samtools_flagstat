@@ -44,11 +44,11 @@
           "hours": 2
         }
       },
-      "interpreter": "bash",
-      "release": "20.04",
       "distribution": "Ubuntu",
-      "file": "src/dnanexus_samtools_flagstat.sh",
-      "version": "0"
+      "release": "20.04",
+      "version": "0",
+      "interpreter": "bash",
+      "file": "src/dnanexus_samtools_flagstat.sh"
     },
     "developers":[
       "org-emee_1"
@@ -73,3 +73,4 @@
       }
     }
   }
+  
