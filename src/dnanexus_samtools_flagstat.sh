@@ -23,6 +23,9 @@ main() {
 
     dx download "$input_bam_index" -o input_bam_index
 
+    outfile=${input_bam_prefix}.flagstat
+    samtools flagstat input_bam > $outfile
+
     flagstat_output=$(dx upload $outfile --brief)
 
     dx-jobutil-add-output flagstat_output "$flagstat_output" --class=file
