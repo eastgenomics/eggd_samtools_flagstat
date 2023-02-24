@@ -1,69 +1,75 @@
 {
-  "name": "samtools_flagstat_v1.0.0",
-  "title": "samtools_flagstat_v1.0.0",
-  "summary": "Provides counts for each of 13 categories based primarily on bit flags in the FLAG field. Each category in the output is broken down into QC pass and QC fail. In the default output format, these are presented as \"#PASS + #FAIL\" followed by a description of the category. See http://www.htslib.org/doc/samtools-flagstat.html for further documentation.",
-  "dxapi": "1.0.0",
-  "properties": {
-    "githubRelease":"v1.0.0"
-  },
-  "inputSpec": [
-    {
-      "name": "input_bam",
-      "label": "input bam",
-      "class": "file",
-      "optional": false,
-      "patterns": [
-        "*.bam"
-      ],
-      "help": ""
-    },
-    {
-      "name": "input_bam_index",
-      "label": "input_bam_index",
-      "class": "file",
-      "optional": false,
-      "patterns": [
-        "*.bam.bai"
-      ],
-      "help": ""
-    }
-  ],
-  "outputSpec": [
-    {
-      "name": "flagstat_output",
-      "label": "flagstat_output",
-      "class": "file",
-      "patterns": [
-        "*.flagstat"
-      ],
-      "help": ""
-    }
-  ],
-  "runSpec": {
-    "timeoutPolicy": {
-      "*": {
-        "hours": 2
+    "name": "eggd_samtools_flagstat",
+    "title": "eggd_samtools_flagstat",
+    "summary": "Provides read counts for each of 13 categories based primarily on bit flags in the FLAG field. Each category in the output is broken down into QC pass and QC fail. In the default output format, these are presented as \"#PASS + #FAIL\" followed by a description of the category. See http://www.htslib.org/doc/samtools-flagstat.html for further documentation",
+    "version": "1.1.0",
+    "whatsNew": "* v1.1.0 Updated samtools version to 1.16.1, Transitioned to a DNANexus app, Updated name, instance type and ubuntu release, deleted githubrelease field. ",
+    "dxapi": "1.0.0",
+    "inputSpec": [
+      {
+        "name": "input_bam",
+        "label": "input bam",
+        "class": "file",
+        "optional": false,
+        "patterns": [
+          "*.bam"
+        ],
+        "help": ""
+      },
+      {
+        "name": "input_bam_index",
+        "label": "input_bam_index",
+        "class": "file",
+        "optional": false,
+        "patterns": [
+          "*.bam.bai"
+        ],
+        "help": ""
       }
-    },
-    "interpreter": "bash",
-    "release": "16.04",
-    "distribution": "Ubuntu",
-    "file": "src/dnanexus_samtools_flagstat.sh"
-  },
-  "access": {
-    "project": "CONTRIBUTE",
-    "allProjects": "VIEW",
-    "network": [
-      "*"
-    ]
-  },
-  "regionalOptions": {
-    "aws:eu-central-1": {
-      "systemRequirements": {
+    ],
+    "outputSpec": [
+      {
+        "name": "flagstat_output",
+        "label": "flagstat_output",
+        "class": "file",
+        "patterns": [
+          "*.flagstat"
+        ],
+        "help": ""
+      }
+    ],
+    "runSpec": {
+      "timeoutPolicy": {
         "*": {
-          "instanceType": "mem1_ssd1_x2"
+          "hours": 2
+        }
+      },
+      "distribution": "Ubuntu",
+      "release": "20.04",
+      "version": "0",
+      "interpreter": "bash",
+      "file": "src/dnanexus_samtools_flagstat.sh"
+    },
+    "developers":[
+      "org-emee_1"
+    ],
+    "authorizedUsers": [
+      "org-emee_1"
+    ],
+    "access": {
+      "project": "CONTRIBUTE",
+      "allProjects": "VIEW",
+      "network": [
+        "*"
+      ]
+    },
+    "regionalOptions": {
+      "aws:eu-central-1": {
+        "systemRequirements": {
+          "main": {
+            "instanceType": "mem1_ssd1_v2_x2"
+          }
         }
       }
     }
   }
-}
